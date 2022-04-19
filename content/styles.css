@@ -1,0 +1,112 @@
+/* Setting colours that can be used throughout the project */
+:root {
+  --hue: 200;
+  --saturation: 50%;
+  --foreground-color: hsl(var(--hue), var(--saturation), 75%); /*https://www.w3schools.com/css/css3_variables.asp*/
+  --background-color: hsl(var(--hue), var(--saturation), 20%);
+  --box-color: hsl(var(--hue), var(--saturation), 15%);
+}
+
+body {
+  font-family:'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  background-color: var(--background-color);
+  color: white;
+}
+
+#card {
+  height: 320px;
+}
+
+#message {
+  background-color: var(--box-color);
+  max-width: 700px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  padding: 10px;
+  border-radius: 5px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+#score {
+  text-align: center;
+}
+
+.decks {
+  background-color: var(--box-color);
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#small-deck, #big-deck {
+  display: inline;
+}
+
+.btn {
+  background-color: var(--box-color);
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: whitesmoke;
+  display: flex;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 500;
+  justify-content: center;
+  flex-wrap: wrap;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  margin-top: 1em;
+  position: relative;
+  text-align: center;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+}
+
+.btn:hover {
+  transform: rotate(+2deg);
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  border: 1px solid white;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.btn:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+/* https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+@media (min-width: 768px) {
+  .btn {
+    font-size: 1.25rem;
+  }
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  row-gap: 5px;
+  align-content: center;
+  text-align: center;
+}

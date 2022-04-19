@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Higher or Lower</title>
+</head>
+<body>
+    <h1 id="title">Higher or Lower?</h1>
+
+    <div id="message">
+        <p>In this game, a card will be drawn and you will have to guess whether the next card will be higher or lower than the one showed.</p>
+        <p>The cards used are standard ranking numerical cards, with an Ace low and King high.</p>
+        <p>For each correct guess you get a point and the game is won by guessing right all the way through the deck of cards.</p>
+        <p>Good luck!</p>
+    </div>
+
+    <div id="post-game-message" style="display: none;">
+        <p>Well played! Now play again. Or not. Whatever you feel like :)</p>
+    </div>
+
+    <div class="decks" id="decks">
+            <input type="radio" id="small-deck" name="deckchoice" checked>
+            <label for="small-deck"> Play with a small deck </label>
+
+            <input type="radio" id="big-deck" name="deckchoice">
+            <label for="big-deck"> Play with a big deck </label>
+    </div>
+
+    <div id="highscore" style="display: none;">
+        <p>Your all time highscore is:</p>
+        <p id="score"></p>
+    </div>
+
+    <button class="btn" id="start-game">Start Game</button>
+
+    <div id="card"></div>
+    
+    <div class="choices">
+        <button class="btn" id="higher" style="display: none;">Higher</button>
+        <button class="btn" id="lower" style="display: none;">Lower</button>
+        <button class="btn" id="skip" style="display: none;">Skip</button>
+        <button class="btn" id="hint" style="display: none;">Hint</button>
+    </div>
+
+
+    <button class="btn" id="quit" style="display: none;">Quit Game</button>
+    <button class="btn" id="new-game" style="display: none;">New Game</button>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
