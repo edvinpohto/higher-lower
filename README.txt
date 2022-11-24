@@ -5,7 +5,7 @@ Here are instructions for how to set up a node.js and Express local server to in
 with the application in.
 
 1. Install and initialise node.js on your computer. https://nodejs.org/en/ 
-2. In the submission directory, run: 'npm install express'
+2. In the submission directory, run: 'npm install'
 3. Finally, in the same directory as you ran the previous, start the server by 
 running: 'node server.js'
 
